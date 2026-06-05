@@ -40,7 +40,8 @@ MODEL_NAME = os.getenv(
     "EMBEDDING_MODEL",
     "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
 )
-API_KEY = os.getenv("EMBEDDING_API_KEY", "")
+API_KEY = os.getenv("EMBEDDING_API_KEY", "0c7c31ab831440c888c1f9552c99ca6f")
+
 MAX_BATCH_SIZE = get_int_env("MAX_BATCH_SIZE", 64)
 NORMALIZE = get_bool_env("EMBEDDING_NORMALIZE", True)
 LOG_TEXTS = get_bool_env("LOG_TEXTS", False)
