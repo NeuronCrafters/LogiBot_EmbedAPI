@@ -36,11 +36,9 @@ def get_int_env(name: str, default: int) -> int:
         logger.warning("invalid_int_env name=%s value=%s fallback=%s", name, value, default)
         return default
 
-MODEL_NAME = os.getenv(
-    "EMBEDDING_MODEL",
-    "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
-)
-API_KEY = os.getenv("EMBEDDING_API_KEY", "0c7c31ab831440c888c1f9552c99ca6f")
+
+MODEL_NAME = "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2"
+API_KEY = "0c7c31ab831440c888c1f9552c99ca6f"
 
 MAX_BATCH_SIZE = get_int_env("MAX_BATCH_SIZE", 64)
 NORMALIZE = get_bool_env("EMBEDDING_NORMALIZE", True)
